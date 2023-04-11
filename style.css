@@ -1,0 +1,803 @@
+/* basic component */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "source sans pro";
+    src: url('fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf');
+}
+@font-face {
+    font-family: "Roboto medium";
+    src: url('fonts/Roboto/Roboto-Medium.ttf');
+}
+@font-face {
+    font-family: "Roboto light";
+    src: url('fonts/Roboto/Roboto-Light.ttf');
+}
+section {
+    width: calc(100% - 6rem);
+    margin: 0 auto;
+}
+.row {
+    max-width: 110rem;
+    margin: 0 auto;
+}
+.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.btn {
+    width: 19rem;
+    height: 5rem;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+.btn:hover {
+    cursor: pointer;
+    transform: scale(.9);
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    -o-transform: scale(.9);
+}
+.btn{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+}
+.common-text {
+    font-size: 1.6rem;
+    font-family: 'Roboto light';
+    color: rgb(240, 240, 240);
+    line-height: 3rem;
+}
+h2 {
+    font-size: 4rem;
+    font-family: "source sans pro";
+}
+/* header start here */
+.header {
+    background: url("images/hero-bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 110vh;
+    position: relative;
+}
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+.navbar .logo {
+    padding: 3rem;
+    padding-left: 0;
+}
+.navbar .logo a:link,
+.navbar .logo a:visited {
+    font-size: 3.6rem;
+    color: #fff;
+    font-family: 'source sans pro';
+}
+.navbar ul li {
+    font-size: 1.6rem;
+    float: right;
+    padding: 4rem 2rem;
+    text-transform: capitalize;
+    font-family: 'Roboto medium';
+}
+.navbar ul li a:link,
+.navbar ul li a:visited {
+    color: #fff;
+    transition: .1s;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+    -ms-transition: .1s;
+    -o-transition: .1s;
+}
+.navbar ul li a:hover {
+    color: rgb(241, 241, 241);
+    border-bottom: .2rem solid #fb414e;
+}
+.navbar ul li:first-child {
+    padding-right: 0;
+}
+.navbar ul li:last-child {
+    padding-left: 0;
+}
+.hero-text {
+    margin-top: 5%;
+}
+.hero-text h1 {
+    font-size: 6rem;
+    color: #fff;
+    text-align: center;
+    font-family: 'source sans pro';
+}
+.hero-text .common-text {
+    text-align: center;
+    margin-top: 3rem;
+    text-transform: capitalize;
+}
+.hero-text .hero-btn {
+   text-align: center;
+   margin-top: 3rem ;
+}
+
+.hero-btn .hero-btn-1 {
+    background: #fb414e;
+    border: 0;
+    margin-right: 3rem;
+    transition: .3s;
+}
+.hero-text .hero-btn-2 {
+    background-color: rgba(0, 0, 0, 0);
+    border: .2rem solid #fb414e;
+}
+.hero-btn .hero-btn-2:hover {
+    background: #fb414e;
+}
+.hero-btn a:link,
+.hero-btn a:visited {
+    color: #fff;
+}
+.hero-btn a:hover {
+    color: rgb(241, 241, 241);
+}
+
+/* header end here */
+
+/* service card start here */
+.service-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 38rem;
+    grid-gap: 2rem;
+    position: relative;
+    top: -7rem;
+    left: 0;
+}
+.service-card h3 {
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Roboto medium';
+    letter-spacing: .1rem;
+    padding: 2.5rem 0;
+}
+.service-card h3::after {
+    clear: both;
+    content: "";
+    display: table;
+    height: .3rem;
+    width: 5rem;
+    background-color: #fff;
+    margin-top: 3rem;
+}
+.service-card > div {
+    padding: 6rem 4rem;
+}
+.service-card .service-card-1 {
+    background-color: #fb414e;
+}
+.service-card .service-card-2 {
+    background-color: #202b30;
+}
+.service-card .service-card-3 {
+    background-color: #202b30;
+}
+/* service card end here */
+
+/* business plan section start here */
+#business {
+    background-color: #202b30;
+}
+.business-plan {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+    padding: 6rem 0;
+}
+.business-plan-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+}
+.business-plan-text h2 {
+    color: #fff;
+    margin-bottom: 4rem;
+}
+.business-plan-btn {
+    background-color: #202b30;
+    border: .2rem solid #fff;
+    margin-top: 6rem;
+}
+
+/* business plan section end here */
+
+/* service text section start here */
+#service-text {
+    background-color: #f8f8f8;
+    margin: 10rem auto; 
+}
+.service-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    padding: 6rem 0;
+}
+.service-text-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    grid-gap: 4rem;
+}
+.service-text-1 h3 {
+    color: #1f1f1f;
+    font-size: 2rem;
+    font-family: 'source sans pro';
+    margin-bottom: 2rem;
+}
+.service-text p {
+    color: #838383;
+}
+.service-text-2 h2 {
+    margin-bottom: 3rem;
+}
+/* service text section end here */
+
+/* work section start here */
+.work-btn {
+    text-align: center;
+}
+.work-btn button {
+    background-color: #fff;
+    border: 0;
+    text-transform: uppercase;
+    color: #a4a4a4;
+    margin: 4rem 4rem 4rem 0;
+    transition: .1s;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+    -ms-transition: .1s;
+    -o-transition: .1s;
+}
+.work-btn button:hover {
+    cursor: pointer;
+}
+.work-btn .mixitup-control-active {
+    color: #1f1f1f;
+    border-bottom: .2rem solid #1f1f1f;
+}
+.work-item img {
+    width: 100%;
+    height: 100%;
+}
+.work .work-item {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% ;
+    grid-template-rows: min-content min-content;
+    grid-gap: 1rem;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+/* work section end here */
+
+/* client section start here */
+.our-client {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+.our-client-desc .common-text {
+    color: #1f1f1f;
+    padding: 3rem 0;
+}
+.our-client-btn {
+    background-color: #fff;
+}
+.our-client-btn {
+    color: #1f1f1f;
+}
+/* client section end here */
+
+/* handcraft design star here */
+#handcraft-design {
+    background-color: #f8f8f8;
+}
+.handcraft-design {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+    padding: 10rem 0 5rem 0;
+}
+.handcraft-design-desc p {
+    color: #838383;
+    font-size: 1.6rem;
+}
+.handcraft-design-desc .handcraft-text {
+    padding: 3rem 0;
+}
+.handcraft-design-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+.handcraft-design-item h4 {
+    font-size: 2rem;
+    color: #5e5e5e;
+    padding: 1rem 0 2rem 0;
+    text-transform: capitalize;
+}
+.handcraft-design .handcraft-design-img img {
+    width: 100%;
+    height: 50rem;
+}
+/* handcraft design end here */
+
+/* project section start here */
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+    padding: 10rem 0 5rem 0;
+}
+.project-desc {
+    text-align: right;
+}
+.project-desc h2 {
+    font-size: 5rem;
+    color: #000;
+}
+.project-desc .project-text {
+    font-size: 1.6rem;
+    color: #838383;
+    padding: 3rem 0;
+}
+.project-desc .project-text:last-child {
+    padding-top: 0;
+}
+.project-form input, select {
+    padding: 1rem;
+    text-transform: capitalize;
+    color: #000;
+}
+.project-form #name {
+    width: 100%;
+}
+.project-form #company-name, #email {
+    width: 48%;
+    float: left;
+    margin: 2rem 0;
+}
+.project-form #company-name {
+    margin-right: 4%;
+}
+.project-form #service {
+    width: 100%;
+}
+.project-form #service option {
+    color: #000;
+    font-family: 'Roboto light';
+}
+.project-form textarea {
+    width: 100%;
+    height: 20rem;
+    margin: 2rem 0;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    padding: 1rem;
+}
+.project-form input[type="submit"] {
+    background-color: #fb414e;
+    border: 0;
+    grid-column: span / 2;
+    width: 100%;
+    color: #fff;
+    text-transform: capitalize;
+}
+.project-form input[type="submit"]:hover {
+    cursor: pointer;
+}
+/* project section end here */
+
+/* footer section start here */
+#footer {
+    background: #202b30;
+    padding: 5rem 0;
+}
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+}
+.contact h4 {
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-family: 'Roboto medium';
+    letter-spacing: .1rem;
+    padding: 4rem 0;
+}
+
+.contact-btn a {
+    padding-right: 1rem;
+}
+.contact-btn a i {
+    color: #fb414e;
+    font-size: 3rem;
+    padding: 5rem 0 0rem 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.subscription-form .sub-heading {
+    text-align: right;
+}
+.subscription-form input {
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+.subscription-form input[type="email"] {
+    width: 80%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    border: 0;
+}
+.subscription-form input[type="submit"] {
+    width: 20%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    border: 0;
+    background-color: #fb414e;
+}
+.subscription-form input[type="submit"]:hover {
+    cursor: pointer;
+}
+.subscription-form p {
+    color: #586165;
+    font-size: 1.4rem;
+    font-family: 'Roboto light';
+    padding-top: 12rem;
+    text-align: right;
+}
+
+/* footer section end here */
+
+/* responsive start here */
+@media screen and (min-width: 1500px) {
+    .row {
+        max-width: 135rem;
+    }
+    html {
+        font-size: 70%;
+    }
+}
+@media screen and (max-width:1200px) {
+    section {
+        padding: 2rem;
+    }
+    .row {
+        
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+    .hero-text h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        
+    }
+}
+@media screen and (max-width: 992px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+    .btn {
+        width: 15rem;
+        height: 4rem;
+    }
+    /* header start here */
+    .navbar .logo a:link,
+    .navbar .logo a:visited {
+        font-size: 3rem;
+    }
+    .navbar ul li {
+        font-size: 1.4rem;
+        float: right;
+        padding: 4rem 2rem;
+        text-transform: capitalize;
+        font-family: 'Roboto medium';
+    }
+    .hero-text h1 {
+        font-size: 4rem;
+        margin-top: 3rem;
+    }
+    .header {
+        height: 90vh;
+    }
+    /* header end here */
+
+
+    /* service card start here */
+    .service-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .service-card h3 {
+        font-size: 1.8rem;
+        padding: 2rem 0;
+    }
+    .service-card img {
+        height: 4rem;
+        width: 4rem;
+    }
+    .service-card > div {
+        padding: 3rem 2rem 0 2rem; 
+    }
+    .service-card .common-text {
+        text-align: justify;
+        line-height: normal;
+    }
+    .service-card-1,
+    .service-card-2,
+    .service-card-3 {
+        height: 32rem;
+    }
+    /* service card end here */
+
+    /* business plan section start here */
+    #business {
+        margin-top: -5rem;
+    }
+    .business-plan {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5rem;
+        padding: 3rem 0;
+
+    }
+    .business-plan-card img {
+        width: 100%;
+        height: 30rem;
+    }
+    /* business plan section end here */
+
+
+    /* service text section start here */
+    #service-text {
+        margin: 7rem auto; 
+    }
+    .service-text-1 {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+    .service-text-1 h3 {
+        margin-bottom: 1rem;
+    }
+    .service-text p {
+        color: #838383;
+        font-size: 1.4rem;
+    }
+    .service-text-2 h2 {
+        margin-bottom: 2rem;
+    }
+    /* service text section end here */
+
+    .our-client {
+        grid-template-columns: 1fr;
+        grid-gap: 5rem;
+        margin-top: 5rem;
+        text-align: center;
+    }
+    /* client section end here */
+
+    
+    /* handcraft design star here */
+    .handcraft-design {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20rem 50rem;
+        grid-gap: 0rem;
+        padding: 0rem;
+        margin-top: -15rem;
+    }
+    .handcraft-design-desc {
+        order: 2;
+        padding: 0 0 4rem 0;
+    }
+    .handcraft-design-desc .handcraft-text {
+        padding: 3rem 0;
+    }
+    .handcraft-design .handcraft-design-img {
+        margin: 0rem auto;
+        order: 1;
+        justify-content: start;
+        align-self: start;
+    }
+    /* handcraft design end here */
+
+    
+    /*project section start here */
+    .project {
+        padding: 10rem 2rem 5rem 2rem;
+    }
+    /* project section end here */
+}
+
+@media screen and (max-width: 768px) { 
+    /* header start here */
+    .header {
+        height: 120vh;
+        position: relative;
+    }
+    .navbar {
+        display: table;
+        text-align: center;
+    }
+    .navbar .logo {
+        padding: 3rem;
+    }
+    .navbar ul li {
+        font-size: 2rem;
+        float: none;
+        padding: 1rem;
+    }
+    .navbar ul li:first-child {
+        padding-right: 1rem;
+    }
+    .navbar ul li:last-child {
+        padding-left: 1rem;
+    }
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+    /* header end here */
+
+    /* service section start here */
+    .service-card {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        top: 7rem;
+        left: 0;
+    }
+    .service-card h3 {
+        color: #fff;
+        font-size: 2rem;
+        font-family: 'Roboto medium';
+        letter-spacing: .1rem;
+        padding: 2.5rem 0;
+    }
+    .service-card > div {
+        padding: 4rem;
+    }
+    .service-card .service-card-1,
+    .service-card .service-card-2,
+    .service-card .service-card-3 {
+        width: 30rem;
+        margin: auto;
+    }
+    /* service card end here */
+
+    /* business plan section start here */
+    #business {
+        margin-top: 10rem;
+    }
+    /* business plan section end here */
+
+    /* work section start here */
+    .work-btn button {
+        margin: 1rem;
+    }
+    .work .work-item {
+        grid-template-columns: 50% 50% ;
+    }
+    /* work section end here */
+
+    /* client section start here */
+    .our-client img {
+        width: 100%;
+    }
+    /* client section end here */
+
+    /* handcraft design star here */
+    .handcraft-design .handcraft-design-img {
+        height: 30rem;
+        margin: 0 auto;
+    }
+    .handcraft-design-item {
+        grid-template-columns: 1fr;
+    }
+    .handcraft-design-item .handcraft-design-item-1,
+    .handcraft-design-item .handcraft-design-item-2 {
+        background-color: #000000;
+        padding: 2rem;
+        transition: .2s;
+        -webkit-transition: .2s;
+        -moz-transition: .2s;
+        -ms-transition: .2s;
+        -o-transition: .2s;
+}
+    .handcraft-design-item .handcraft-design-item-1:hover,
+    .handcraft-design-item .handcraft-design-item-2:hover {
+        box-shadow: 0 0 .5rem .2rem #a4a4a4;
+    }
+    /* handcraft design end here */
+
+    /* project section start here */
+    .project {
+        grid-template-columns: 1fr;
+        padding: 5rem 3rem;
+    }
+    .project-desc h2 {
+        font-size: 3rem;
+    }
+    /* project section end here */
+    .contact {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    html {
+        font-size: 50%;
+    }
+    .btn {
+        width: 10rem;
+    }
+    .header {
+        height: 90vh;
+    }
+    /* business plan section */
+    .business-plan-card {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .service-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        top: 0;
+        left: 0;
+    }
+    /* service text section start here */
+    .service-text {
+        grid-template-columns: 1fr;
+    }
+    /* service text section end here */
+
+    /* work section */
+    .work .work-item {
+        grid-template-columns: 100%;
+    }
+}
